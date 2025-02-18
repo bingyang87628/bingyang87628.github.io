@@ -52,13 +52,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-
-# 添加新文章后
-git add .
-git commit -m "Add new post: 文章标题"
-git push
-
-git remote remove origin
-git remote add origin https://github.com/bingyang-blog/bingyang-blog.github.io.git
-git branch -M main
-git push -u origin main
