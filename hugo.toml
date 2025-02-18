@@ -3,11 +3,21 @@ languageCode = 'zh-cn'
 title = '冰洋AI探索'
 theme = 'hugo-theme-stack'
 
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.87.0"
+
 [params]
   mainSections = ['post']
   featuredImageField = 'image'
   rssFullContent = true
   favicon = '/favicon.ico'
+
+  [params.imageProcessing]
+    enabled = true
+    method = "image/jpeg"
+    quality = 75
 
   [params.footer]
     since = 2024
@@ -20,11 +30,25 @@ theme = 'hugo-theme-stack'
   [params.sidebar]
     emoji = "🚀"
     subtitle = "探索AI技术的无限可能"
+    compact = false
 
-  [params.sidebar.avatar]
-    enabled = true
-    local = true
-    src = "img/avatar.png"
+    [params.sidebar.avatar]
+      enabled = true
+      local = false
+      src = "/img/avatar.png"
+
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+
+    [params.article.license]
+      enabled = false
+      default = "Licensed under CC BY-NC-SA 4.0"
+
+  [params.comments]
+    enabled = false
+    provider = "disqus"
 
 [menu]
   [[menu.main]]
@@ -32,21 +56,24 @@ theme = 'hugo-theme-stack'
     name = "首页"
     url = "/"
     weight = -100
-    pre = "home"
+    [menu.main.params]
+      icon = "home"
 
   [[menu.main]]
     identifier = "about"
     name = "关于"
     url = "/about"
     weight = -90
-    pre = "user"
+    [menu.main.params]
+      icon = "user"
 
   [[menu.main]]
     identifier = "search"
     name = "搜索"
     url = "/search"
     weight = -80
-    pre = "search"
+    [menu.main.params]
+      icon = "search"
 
 [taxonomies]
   tag = "tags"

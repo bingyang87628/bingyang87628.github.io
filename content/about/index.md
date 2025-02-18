@@ -20,6 +20,6 @@ date: 2024-03-19
 ## 联系方式
 
 - GitHub: [bingyang-blog](https://github.com/bingyang-blog)
-- Email: [your-email@example.com]
+- Email: [bingyang87628@126.com]
 
 欢迎通过以上方式与我交流！ 
