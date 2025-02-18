@@ -2,7 +2,6 @@
 title: "欢迎来到冰洋AI探索"
 description: "这是我的第一篇博客文章"
 date: 2024-03-19
-image: images/cover.jpg
 categories:
     - 公告
 tags:
